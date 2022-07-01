@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Login() {
   const handleClick = async () => {
     const client_id = "d7b721449ad9446ab150ead412dcd3fb";
-    const redirect_uri = "https://malwandla-spotify-clone.netlify.app/";
+    const redirect_uri = " https://spotify-clone-732d9.web.app/";
     const api_uri = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-read-private",
@@ -16,7 +16,7 @@ export default function Login() {
       "user-top-read",
     ];
     window.location.href = `${api_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope.join(
-      " "
+      "%20"
     )}&response_type=token&show_dialog=true`;
   };
   return (
